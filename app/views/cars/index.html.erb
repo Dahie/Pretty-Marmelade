@@ -15,7 +15,9 @@
   <tbody>
     <% @cars.each do |car| %>
       <tr>
-        <td><%= car.title %></td>
+        <td>
+          <%= link_to car.title, '', data: { filepath: url_for(car.car_skin)}, class: 'skinSelector' %>
+        </td>
         <td><%= car.description %></td>
         <td></td>
         <td><%= link_to 'Show', car %></td>
