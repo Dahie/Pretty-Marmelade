@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+gem 'aws-sdk-s3', require: false
 gem 'devise'
 gem 'puma', '~> 4.1'
 gem 'haml'
@@ -51,7 +52,6 @@ group :development do
 end
 
 group :production do
-  gem 'aws-sdk-s3', require: false
   gem 'pg'
 end
 
