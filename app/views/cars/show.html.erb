@@ -15,10 +15,8 @@
   <%= image_tag @car.car_skin %>
 </p>
 
-<p>
-  <strong>User:</strong>
-
-</p>
+<canvas id="renderCanvas" touch-action="none"></canvas>
 
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>
+
