@@ -32,4 +32,6 @@
 
 <canvas id="renderCanvas" touch-action="none"></canvas>
 
-<%= render 'babylon_js' %>
+<% if !@cars.empty? %>
+  <%= render 'babylon_js' %>
+<% end %>
