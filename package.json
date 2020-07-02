@@ -2,14 +2,17 @@
   "name": "pretty_marmelade",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
-    "turbolinks": "^5.2.0",
-    "fomantic-ui": "^2.8.6",
     "babylonjs": "^4.1.0",
-    "babylonjs-loaders": "^4.1.0"
+    "babylonjs-loaders": "^4.1.0",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
