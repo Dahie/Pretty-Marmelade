@@ -1,6 +1,8 @@
-<p id="notice"><%= notice %></p>
+<%= semantic_flash %>
 
 <h1>Cars</h1>
+
+<%= link_to 'New Car', new_car_path %>
 
 <table>
   <thead>
@@ -21,15 +23,31 @@
         <td><%= car.description %></td>
         <td></td>
         <td><%= link_to 'Show', car %></td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-
-<%= link_to 'New Car', new_car_path %>
+<div class="ui three column doubling stackable grid">
+  <div class="column">
+    <div class="ui segment">Content</div>
+  </div>
+  <div class="column">
+    <div class="ui segment">Content</div>
+  </div>
+  <div class="column">
+    <div class="ui segment">Content</div>
+  </div>
+  <div class="column">
+    <div class="ui segment">Content</div>
+  </div>
+  <div class="column">
+    <div class="ui segment">Content</div>
+  </div>
+  <div class="column">
+    <div class="ui segment">Content</div>
+  </div>
+</div>
 
 
 <canvas id="renderCanvas" touch-action="none"></canvas>
