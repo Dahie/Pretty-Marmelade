@@ -5,6 +5,7 @@ ruby '2.7.0'
 
 gem 'aws-sdk-s3', require: false
 gem 'devise'
+gem 'omniauth-google-oauth2'
 gem 'fomantic-ui-sass'
 gem 'jbuilder', '~> 2.7'
 gem 'haml-rails'
