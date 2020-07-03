@@ -12,11 +12,19 @@
   </head>
 
   <body>
-    <% if current_user %>
-      <%= link_to "Logout", destroy_user_session_path %>
-    <% else %>
-      <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
-    <% end %>
+    <div class="container">
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Grand Prix Museum</a>
+        <% if current_user %>
+          <%= link_to "Logout", destroy_user_session_path %>
+        <% else %>
+          <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
+        <% end %>
+      </nav>
+    </div>
+
+
+
 
     <%= yield %>
   </body>
