@@ -3,7 +3,7 @@
   <div class="card-body">
     <h5 class="card-title"><%= car.title %></h5>
     <p class="card-text"><%= car.description %></p>
-    <%= link_to 'Open car', car, class: "btn btn-primary " %>
-    <%= link_to 'Show car', car, class: "btn btn-primary skinSelector", data: { filepath: url_for(car.car_skin)} %>
+    <%= link_to 'Open', car, class: "btn btn-primary " %>
+    <%= link_to 'Show', car, class: "btn btn-primary skinSelector", data: { filepath: url_for(car.car_skin)} %>
   </div>
 </div>

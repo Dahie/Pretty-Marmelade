@@ -2,7 +2,7 @@ class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cars = Car.last(10)
+    @cars = Car.all
     @car = @cars.last
   end
 
