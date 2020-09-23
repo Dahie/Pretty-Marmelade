@@ -15,9 +15,11 @@ export function setupBabylon() {
             var scene = new BABYLON.Scene(engine);
 
             // Add a camera to the scene and attach it to the canvas
-            var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 4, Math.PI / 3.5, 70, new BABYLON.Vector3(0, -10, 0), scene);
+            var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 4, Math.PI / 3.5, 65, new BABYLON.Vector3(0, -10, 0), scene);
+            camera.wheelPrecision = 100000; //Camera scroll speed (lower=faster)
+            camera.lowerRadiusLimit = 1;
+            camera.allowupsidedown = false;
             camera.attachControl(canvas, true);
-            camera.allowUpsideDown = false;
 
             // Add lights to the scene
             var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
@@ -37,7 +39,8 @@ export function setupBabylon() {
             skinSelectors.forEach(function(skinSelector) {
                 skinSelector.ontouchstart =
                 skinSelector.onclick = function (event) {
-                    updateTexture(event.target.dataset.filepath, car);
+                    console.log(event.target.parentElement);
+                    updateTexture(event.target.parentElement.dataset.filepath, car);
                     return false;
                 }
             });
