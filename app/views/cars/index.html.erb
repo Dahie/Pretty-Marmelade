@@ -1,16 +1,30 @@
 <%= semantic_flash %>
 
-<div class="container">
-  <%= link_to 'New Car', new_car_path %>
-
-  <div class="row">
-    <% @cars.each do |car| %>
-      <%= render 'car_card', car: car %>
-    <% end %>
+<div class="row">
+  <div class="col-md-10">
+    <div class="card mb-3  canvas-card">
+      <canvas id="renderCanvas" touch-action="none"></canvas>
+    </div>
   </div>
-
-  <div class="row">
-    <canvas id="renderCanvas" touch-action="none"></canvas>
+  <div class="col-md-2">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Pretty Marmelade</h5>
+        <p class="card-text">Livery museum for Grand Prix 3</p>
+        <% if current_user %>
+          <%= link_to 'New Car', new_car_path, class: "btn btn-primary" %>
+          <%= link_to "Logout", destroy_user_session_path, class: "btn btn-primary" %>
+        <% else %>
+          <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: "btn" %>
+        <% end %>
+      </div>
+    </div>
   </div>
+</div>
+
+<div class="row">
+  <% @cars.each do |car| %>
+    <%= render 'car_card', car: car %>
+  <% end %>
 </div>
 
