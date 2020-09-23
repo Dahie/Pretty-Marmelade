@@ -15,7 +15,7 @@ export function setupBabylon() {
             var scene = new BABYLON.Scene(engine);
 
             // Add a camera to the scene and attach it to the canvas
-            var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 4, Math.PI / 3.5, 65, new BABYLON.Vector3(0, -10, 0), scene);
+            var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 4, Math.PI / 3.0, 65, new BABYLON.Vector3(0, -10, 0), scene);
             camera.wheelPrecision = 100000; //Camera scroll speed (lower=faster)
             camera.lowerRadiusLimit = 1;
             camera.allowupsidedown = false;
