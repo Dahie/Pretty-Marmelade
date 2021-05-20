@@ -5,7 +5,7 @@ ruby '2.7.0'
 
 
 gem 'devise'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'haml'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'rails_admin', '~> 2.0'
